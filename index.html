@@ -124,7 +124,8 @@
 
     .content {
       display: none;
-      padding: 20px 40px;
+      padding: 40px;
+      background-color: #f5f9fa;
     }
 
     .content:target {
@@ -135,10 +136,9 @@
       display: block;
     }
 
-    /* SECCION DE BIENVENIDA */
+    /* SECCIÓN DE BIENVENIDA */
     .bienvenida {
       background-color: var(--celeste-pastel);
-      background-position: center;
       padding: 80px 30px 40px;
       border-radius: 20px;
       color: var(--rosa-intenso);
@@ -153,14 +153,6 @@
       border-radius: 12px;
       display: inline-block;
       animation: zoomIn 0.8s ease-out;
-    }
-
-    .bienvenida .intro {
-      font-size: 1.2em;
-      margin-top: 20px;
-      background-color: rgba(0,0,0,0.4);
-      border-radius: 12px;
-      display: inline-block;
     }
 
     .bienvenida .frase {
@@ -187,7 +179,7 @@
 
     .imagen-principal {
       width: 100%;
-      max-width: 300%;
+      max-width: 100%;
       height: 640px;
       object-fit: cover;
       border-radius: 15px;
@@ -196,15 +188,14 @@
       display: block;
     }
 
-    /* SECCION QUE HACER + GALERIA */
+    /* SECCIÓN QUE HACER + GALERIA */
     .seccion-quehacer {
       background-color: #f9f9f9;
       padding: 40px 20px;
       border-radius: 20px;
       margin: 30px;
       text-align: center;
-    box-shadow: 0 6px 18px rgba(0,0,0,0.3);
-
+      box-shadow: 0 6px 18px rgba(0,0,0,0.3);
     }
 
     .seccion-quehacer h2 {
@@ -280,6 +271,529 @@
       to { transform: scale(1); opacity: 1; }
     }
 
+    /* LUGARES TURÍSTICOS */
+    #Lugares h1 {
+      text-align: center;
+      color: var(--rosa-intenso);
+      margin-bottom: 30px;
+    }
+
+    .tabla-lugares {
+      margin: 0 auto;
+      border-collapse: collapse;
+      box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+      border: 2px solid var(--verde-azulado);
+      border-radius: 10px;
+      overflow: hidden;
+      width: 100%;
+      max-width: 1000px;
+    }
+
+    .tabla-lugares thead {
+      background-color: var(--rosa-intenso);
+      color: white;
+    }
+
+    .tabla-lugares th,
+    .tabla-lugares td {
+      padding: 12px;
+      text-align: center;
+      border: 2px solid #ffffff;
+      vertical-align: top;
+    }
+
+    .tabla-lugares tbody tr:nth-child(odd) {
+      background-color: var(--rosa-claro);
+    }
+
+    .tabla-lugares tbody tr:nth-child(even) {
+      background-color: var(--celeste-pastel);
+    }
+
+    .tabla-lugares img {
+      width: 100%;
+      max-width: 130px;
+      border-radius: 10px;
+      box-shadow: 0 2px 6px rgba(0, 0, 0, 0.1);
+    }
+
+    /* GALERÍA */
+    #Galeria h1 {
+      text-align: center;
+      color: var(--rosa-intenso);
+      margin-bottom: 30px;
+    }
+
+    .galeria-grid {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+      gap: 20px;
+      padding: 20px;
+      max-width: 1200px;
+      margin: 0 auto;
+    }
+
+    .galeria-item {
+      overflow: hidden;
+      border-radius: 12px;
+      box-shadow: 0 4px 12px rgba(0,0,0,0.2);
+      transition: transform 0.3s ease;
+    }
+
+    .galeria-item img {
+      width: 100%;
+      height: 200px;
+      object-fit: cover;
+      display: block;
+    }
+
+    .galeria-item:hover {
+      transform: scale(1.05);
+    }
+
+    .video-content {
+      text-align: center;
+      margin: 40px 0;
+    }
+
+    .video-content h2 {
+      color: var(--rosa-intenso);
+      margin-bottom: 20px;
+    }
+
+    .video-content iframe {
+      max-width: 100%;
+      border-radius: 12px;
+      box-shadow: 0 4px 12px rgba(0,0,0,0.2);
+    }
+
+    .text-center {
+      text-align: center;
+    }
+
+    /* SECCIÓN DE PAQUETES */
+    .section-title {
+      text-align: center;
+      font-size: 2rem;
+      margin-bottom: 1.5rem;
+      color: var(--verde-azulado);
+    }
+
+    .banda-superior {
+      width: 100%;
+      overflow: hidden;
+      margin-bottom: 1rem;
+    }
+
+    .banda-superior img.portada-img {
+      width: 100%;
+      height: auto;
+      display: block;
+      object-fit: cover;
+    }
+
+    .tarjetas-wrapper {
+      background: var(--fondo);
+      padding: 1rem;
+      border-radius: 8px;
+      box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
+    }
+
+    .row {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 1rem;
+      justify-content: center;
+    }
+
+    .col {
+      flex: 1 1 calc(33% - 1rem);
+      min-width: 280px;
+      max-width: 350px;
+    }
+
+    .card {
+      border-radius: 10px;
+      overflow: hidden;
+      background: var(--fondo);
+      box-shadow: 0 3px 10px rgba(0, 0, 0, 0.1);
+      display: flex;
+      flex-direction: column;
+    }
+
+    .card-img-container img {
+      width: 100%;
+      height: 180px;
+      object-fit: cover;
+    }
+
+    .card-body {
+      padding: 1rem;
+      flex-grow: 1;
+    }
+
+    .card-title {
+      font-size: 1.25rem;
+      color: var(--rosa-intenso);
+      margin-bottom: 0.5rem;
+    }
+
+    .card-text, .card-body ul {
+      font-size: 0.9rem;
+      color: #333;
+      line-height: 1.4;
+    }
+
+    .card-footer {
+      padding: 0.75rem 1rem;
+    }
+
+    .btn {
+      cursor: pointer;
+      padding: 0.5rem;
+      font-weight: bold;
+      border: none;
+      border-radius: 5px;
+      color: var(--fondo);
+    }
+
+    .btn-warning {
+      background-color: var(--rosa-intenso);
+      color: var(--fondo);
+      transition: background-color 0.3s ease;
+    }
+
+    .btn-warning:hover {
+      background-color: var(--rosa-claro);
+      color: var(--rosa-intenso);
+      font-weight: 900;
+    }
+
+    .card-morado {
+      border: 2px solid var(--rosa-intenso);
+    }
+
+    .card-morado-claro {
+      border: 2px solid var(--rosa-claro);
+    }
+
+    #Paquetes h2.text-white {
+      color: var(--fondo);
+      text-shadow: 1px 1px 4px rgba(0,0,0,0.3);
+    }
+
+    /* DATOS DEL VIAJE */
+    .container {
+      padding: 40px;
+    }
+
+    .nombre {
+      font-size: 32px;
+      margin-bottom: 10px;
+    }
+
+    .subtitle {
+      font-size: 18px;
+      margin-bottom: 40px;
+    }
+
+    .grid {
+      display: flex;
+      justify-content: space-between;
+      flex-wrap: wrap;
+    }
+
+    .dv-card {
+      width: 22%;
+      padding: 20px;
+      border-radius: 20px;
+      text-align: center;
+      box-sizing: border-box;
+      margin-bottom: 30px;
+    }
+
+    .dv-card img {
+      width: 100%;
+      height: 180px;
+      object-fit: cover;
+      border-radius: 15px;
+      margin-bottom: 15px;
+    }
+
+    .dv-card.orange {
+      background-color: var(--rosa-intenso);
+      color: white;
+    }
+
+    .dv-card.blue, .dv-card.beige {
+      background-color: var(--celeste-pastel);
+      color: #000;
+    }
+
+    .dv-stats {
+      width: 30%;
+      background-color: var(--celeste-pastel);
+      padding: 20px;
+      border-radius: 20px;
+      box-sizing: border-box;
+      margin-bottom: 30px;
+    }
+
+    .dv-stats h2 {
+      margin-top: 0;
+      font-size: 22px;
+    }
+
+    .dv-stats-box {
+      background-color: var(--rosa-claro);
+      padding: 20px;
+      text-align: center;
+      border-radius: 15px;
+      margin-bottom: 20px;
+    }
+
+    .dv-stats-box h3 {
+      font-size: 32px;
+      margin: 0;
+    }
+
+    .bar-group {
+      display: flex;
+      align-items: center;
+      margin-bottom: 15px;
+      gap: 10px;
+    }
+
+    .bar-group img {
+      width: 40px;
+      height: 40px;
+      border-radius: 8px;
+      object-fit: cover;
+    }
+
+    .bar {
+      flex-grow: 1;
+      background-color: var(--rosa-claro);
+      border-radius: 20px;
+      overflow: hidden;
+      height: 12px;
+      margin-right: 10px;
+    }
+
+    .fill {
+      height: 100%;
+      background-color: var(--rosa-intenso);
+    }
+
+    .percent {
+      font-weight: bold;
+      width: 40px;
+    }
+
+    .dv-opinions-header {
+      background-color: var(--rosa-intenso);
+      color: white;
+      text-align: center;
+      padding: 20px;
+      font-size: 28px;
+      font-weight: bold;
+      margin-top: 50px;
+      border-radius: 10px 10px 0 0;
+    }
+
+    .dv-comment {
+      background-color: var(--celeste-pastel);
+      padding: 20px;
+      border-radius: 20px;
+      margin: 20px auto;
+      width: 85%;
+      font-size: 18px;
+      color: #000;
+      position: relative;
+    }
+
+    .dv-author {
+      text-align: right;
+      margin-top: 10px;
+      font-style: italic;
+    }
+
+    /* FORMULARIO */
+    #Reserva {
+      padding: 60px 20px;
+      background-color: #f5f9fa;
+      border-top: 4px solid var(--rosa-intenso);
+      margin-bottom: 60px;
+    }
+
+    #Reserva h2 {
+      text-align: center;
+      color: var(--rosa-intenso);
+      margin-bottom: 40px;
+      font-size: 32px;
+    }
+
+    .formulario {
+      background-color: white;
+      max-width: 500px;
+      margin: 0 auto;
+      padding: 40px;
+      border-radius: 16px;
+      box-shadow: 0 10px 25px rgba(0, 0, 0, 0.1);
+    }
+
+    label {
+      display: block;
+      margin-top: 20px;
+      margin-bottom: 8px;
+      font-weight: bold;
+      color: var(--rosa-intenso);
+    }
+
+    input, select, textarea {
+      width: 100%;
+      padding: 12px;
+      border: 1px solid #ccc;
+      border-radius: 6px;
+      font-size: 15px;
+      box-sizing: border-box;
+    }
+
+    textarea {
+      resize: vertical;
+      height: 100px;
+    }
+
+    button {
+      margin-top: 30px;
+      width: 100%;
+      padding: 14px;
+      background-color: #5dafbf;
+      color: white;
+      font-size: 16px;
+      font-weight: bold;
+      border: none;
+      border-radius: 6px;
+      cursor: pointer;
+      transition: background-color 0.3s ease;
+    }
+
+    button:hover {
+      background-color: var(--rosa-intenso);
+    }
+
+    /* INICIO */
+    .header {
+      text-align: center;
+      padding: 40px 20px 10px;
+    }
+
+    .header h1 {
+      color: var(--verde-azulado);
+      font-weight: bold;
+    }
+
+    .header p {
+      color: black;
+      max-width: 900px;
+      margin: 0 auto;
+      text-align: justify;
+      line-height: 1.6;
+    }
+
+    .info-section {
+      display: flex;
+      margin-top: 80px;
+      gap: 0;
+    }
+
+    .info-section .image-container {
+      width: 50%;
+      background-color: var(--rosa-intenso);
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      border-radius: 10px 0 0 10px;
+      padding: 20px;
+      box-sizing: border-box;
+    }
+
+    .info-section .image-container img {
+      width: 60%;
+      height: auto;
+      border-radius: 10px;
+      object-fit: cover;
+      display: block;
+    }
+
+    .info-text {
+      width: 50%;
+      background-color: var(--verde-azulado);
+      color: white;
+      padding: 50px 40px;
+      box-sizing: border-box;
+      border-radius: 0 10px 10px 0;
+      text-align: justify;
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+    }
+
+    .info-text h2 {
+      color: white;
+      font-weight: bold;
+      margin-bottom: 20px;
+      text-align: left;
+    }
+
+    .info-text ul {
+      padding-left: 20px;
+      line-height: 1.6;
+      margin: 0;
+    }
+
+    .additional-section {
+      background-color: white;
+      padding: 40px 20px;
+      max-width: 1200px;
+      margin: 0 auto;
+    }
+
+    .additional-section h1 {
+      color: var(--verde-azulado);
+      font-weight: bold;
+      text-align: center;
+      margin-bottom: 30px;
+    }
+
+    .boxes-container {
+      display: flex;
+      justify-content: space-between;
+      gap: 40px;
+      flex-wrap: nowrap;
+    }
+
+    .box {
+      background-color: #f5f5f5;
+      border: 2px solid var(--verde-azulado);
+      border-radius: 10px;
+      padding: 20px;
+      flex: 1 1 30%;
+      box-sizing: border-box;
+      color: black;
+      text-align: left;
+      line-height: 1.6;
+      overflow-wrap: break-word;
+    }
+
+    .box strong {
+      display: block;
+      margin-bottom: 12px;
+      color: var(--verde-azulado);
+      font-weight: bold;
+    }
+
+    /* FOOTER */
     footer {
       background-color: var(--verde-azulado);
       color: white;
@@ -323,560 +837,110 @@
       color: #eee;
     }
 
-
-
-
-    /*LUGARES TURÍSTICOS*/
-
-.content {
-  padding: 40px;
-  background-color: #f0f8f8;
-  color: #333;
-}
-
-/* Título */
-#Lugares h1 {
-  text-align: center;
-  color: #da2864;
-  margin-bottom: 30px;
-}
-
-/* Tabla */
-.tabla-lugares {
-  margin: 0 auto;
-  border-collapse: collapse;
-  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
-  border: 2px solid #17a5a3;
-  border-radius: 10px;
-  overflow: hidden;
-  width: 100%;
-  max-width: 1000px;
-}
-
-.tabla-lugares thead {
-  background-color: #da2864;
-  color: white;
-}
-
-.tabla-lugares th,
-.tabla-lugares td {
-  padding: 12px;
-  text-align: center;
-  border: 2px solid #ffffff;
-  vertical-align: top;
-}
-
-.tabla-lugares tbody tr:nth-child(odd) {
-  background-color: #f5a6bf;
-}
-
-.tabla-lugares tbody tr:nth-child(even) {
-  background-color: #98e2e1;
-}
-
-.tabla-lugares img {
-  width: 100%;
-  max-width: 130px;
-  border-radius: 10px;
-  box-shadow: 0 2px 6px rgba(0, 0, 0, 0.1);
-}
-
-/* Responsive */
-@media (max-width: 768px) {
-  .tabla-lugares,
-  .tabla-lugares thead,
-  .tabla-lugares tbody,
-  .tabla-lugares th,
-  .tabla-lugares td,
-  .tabla-lugares tr {
-    display: block;
-  }
-
-  .tabla-lugares thead {
-    display: none;
-  }
-
-  .tabla-lugares tr {
-    margin-bottom: 15px;
-    background-color: #fff;
-    box-shadow: 0 2px 8px rgba(0, 0, 0, 0.05);
-    border-radius: 8px;
-  }
-
-  .tabla-lugares td {
-    padding: 10px 16px;
-    position: relative;
-    padding-left: 50%;
-    border: none;
-    text-align: left;
-  }
-
-  .tabla-lugares td::before {
-    position: absolute;
-    top: 10px;
-    left: 16px;
-    width: 45%;
-    padding-right: 10px;
-    white-space: nowrap;
-    font-weight: bold;
-  }
-
-  .tabla-lugares td:nth-of-type(1)::before {
-    content: "Nombre del lugar";
-  }
-
-  .tabla-lugares td:nth-of-type(2)::before {
-    content: "Ubicación";
-  }
-
-  .tabla-lugares td:nth-of-type(3)::before {
-    content: "Imagen";
-  }
-
-  .tabla-lugares td:nth-of-type(4)::before {
-    content: "Breve descripción";
-  }
-}
-  
-
-
-
-    /*SECCION DE GALERÍA*/
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-/*SECCION DE PAQUETES*/
-
-#datos-viaje {
-  padding: 2rem;
-  background-color: #f5f5f5;
-  font-family: Arial, sans-serif;
-}
-
-.section-title {
-  text-align: center;
-  font-size: 2rem;
-  margin-bottom: 1.5rem;
-  color: #17a5a3; /* verde azulado */
-}
-
-/* Banda superior imagen portada */
-.banda-superior {
-  width: 100%;
-  overflow: hidden;
-  margin-bottom: 1rem;
-}
-
-.banda-superior img.portada-img {
-  width: 100%;
-  height: auto;
-  display: block;
-  object-fit: cover;
-}
-
-/* Contenedor de tarjetas */
-.tarjetas-wrapper {
-  background: white;
-  padding: 1rem;
-  border-radius: 8px;
-  box-shadow: 0 2px 8px rgb(0 0 0 / 0.1);
-}
-
-/* Grid de tarjetas */
-.row {
-  display: flex;
-  flex-wrap: wrap;
-  gap: 1rem;
-  justify-content: center;
-}
-
-.col {
-  flex: 1 1 calc(33% - 1rem);
-  min-width: 280px;
-  max-width: 350px;
-}
-
-/* Tarjetas */
-.card {
-  border-radius: 10px;
-  overflow: hidden;
-  background: white;
-  box-shadow: 0 3px 10px rgb(0 0 0 / 0.1);
-  display: flex;
-  flex-direction: column;
-}
-
-.card-img-container img {
-  width: 100%;
-  height: 180px;
-  object-fit: cover;
-}
-
-.card-body {
-  padding: 1rem;
-  flex-grow: 1;
-}
-
-.card-title {
-  font-size: 1.25rem;
-  color: #4b0082; /* morado */
-  margin-bottom: 0.5rem;
-}
-
-.card-text, .card-body ul {
-  font-size: 0.9rem;
-  color: #333;
-  line-height: 1.4;
-}
-
-.card-footer {
-  padding: 0.75rem 1rem;
-}
-
-.btn {
-  cursor: pointer;
-  padding: 0.5rem;
-  font-weight: bold;
-  border: none;
-  border-radius: 5px;
-  color: #fff;
-}
-
-.btn-warning {
-  background-color: #ffd700; /* amarillo */
-  color: #4b0082;
-  transition: background-color 0.3s ease;
-}
-
-.btn-warning:hover {
-  background-color: #e6c200;
-}
-
-/* Variantes de tarjetas morado */
-.card-morado {
-  border: 2px solid #4b0082;
-}
-
-.card-morado-claro {
-  border: 2px solid #9370db;
-}
-
-/* Texto blanco en títulos dentro de sección paquetes */
-#paquetes-turisticos h2.text-white {
-  color: white;
-  text-shadow: 1px 1px 4px rgba(0,0,0,0.7);
-}
-
-/* Responsive */
-@media (max-width: 768px) {
-  .col {
-    flex: 1 1 100%;
-    max-width: 100%;
-  }
-}
-
-
-
-
-
-
-/*SECCION DE DATOS DEL VIAJE*/
-
-
-
-
-
-
-
-
-
-
-
-/*SECCION DE RESERVA*/
-
-
-/*Carolina-SECCION INICIO*/
- body {
-      margin: 0;
-      font-family: Arial, sans-serif;
-      background-color: #ffffff;
-    }
-
-    .header {
-      text-align: center;
-      padding: 40px 20px 10px;
-    }
-
-    .header h1 {
-      color: #17a5a3;
-      font-weight: bold;
-    }
-
-    .header p {
-      color: black;
-      max-width: 900px;
-      margin: 0 auto;
-      text-align: justify;
-      line-height: 1.6;
-    }
-
-    .info-section {
-      display: flex;
-      margin-top: 80px;
-      gap: 0;
-    }
-
-    .info-section .image-container {
-      width: 50%;
-      background-color: #da2864;
-      display: flex;
-      justify-content: center;
-      align-items: center;
-      border-radius: 10px 0 0 10px;
-      padding: 20px;
-      box-sizing: border-box;
-    }
-
-    .info-section .image-container img {
-      width: 60%;
-      height: auto;
-      border-radius: 10px;
-      object-fit: cover;
+    /* AUDIO */
+    audio#audioTiticaca {
+      width: 300px;
+      height: 32px;
+      margin: 25px auto;
       display: block;
-    }
-
-    .info-text {
-      width: 50%;
-      background-color: #17a5a3;
-      color: white;
-      padding: 50px 40px;
-      box-sizing: border-box;
-      border-radius: 0 10px 10px 0;
-      text-align: justify;
-      display: flex;
-      flex-direction: column;
-      justify-content: center;
-    }
-
-    .info-text h2 {
-      color: white;
-      font-weight: bold;
-      margin-bottom: 20px;
-      text-align: left;
-    }
-
-    .info-text ul {
-      padding-left: 20px;
-      line-height: 1.6;
-      margin: 0;
-    }
-
-    /* Nueva sección con cuadros */
-    .additional-section {
-      background-color: white;
-      padding: 40px 20px;
-      max-width: 1200px;
-      margin: 0 auto;
-    }
-
-    .additional-section h1 {
-      color: #17a5a3;
-      font-weight: bold;
-      text-align: center;
-      margin-bottom: 30px;
-    }
-
-    .boxes-container {
-      display: flex;
-      justify-content: space-between;
-      gap: 40px;
-      flex-wrap: nowrap;
-    }
-
-    .box {
-      background-color: #f5f5f5;
-      border: 2px solid #17a5a3;
+      border: 4px solid #aad1d1;
       border-radius: 10px;
-      padding: 20px;
-      flex: 1 1 30%;
-      box-sizing: border-box;
-      color: black;
-      text-align: left;
-      line-height: 1.6;
-      overflow-wrap: break-word;
+      box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
     }
 
-    .box strong {
-      display: block;
-      margin-bottom: 12px;
-      color: #17a5a3;
-      font-weight: bold;
+    /* RESPONSIVE */
+    @media (max-width: 1024px) {
+      .grid {
+        flex-direction: column;
+        align-items: center;
+      }
+
+      .dv-card, .dv-stats {
+        width: 90%;
+        max-width: 400px;
+      }
+
+      .boxes-container {
+        flex-wrap: wrap;
+      }
+
+      .box {
+        flex: 1 1 100%;
+      }
     }
 
+    @media (max-width: 768px) {
+      .col {
+        flex: 1 1 100%;
+        max-width: 100%;
+      }
 
-/*SECCION DE RESERVAS*/
+      .tabla-lugares,
+      .tabla-lugares thead,
+      .tabla-lugares tbody,
+      .tabla-lugares th,
+      .tabla-lugares td,
+      .tabla-lugares tr {
+        display: block;
+      }
 
-:root {
-  --rosa-intenso: #da2864;
-  --rosa-claro: #f5a6bf;
-  --celeste-pastel: #98e2e1;
-  --verde-azulado: #17a5a3;
-  --fondo: #ffffff;
-}
+      .tabla-lugares thead {
+        display: none;
+      }
 
-#datos-viaje {
-  padding: 2rem;
-  background-color: var(--fondo);
-  font-family: Arial, sans-serif;
-}
+      .tabla-lugares tr {
+        margin-bottom: 15px;
+        background-color: #fff;
+        box-shadow: 0 2px 8px rgba(0, 0, 0, 0.05);
+        border-radius: 8px;
+      }
 
-.section-title {
-  text-align: center;
-  font-size: 2rem;
-  margin-bottom: 1.5rem;
-  color: var(--verde-azulado);
-}
+      .tabla-lugares td {
+        padding: 10px 16px;
+        position: relative;
+        padding-left: 50%;
+        border: none;
+        text-align: left;
+      }
 
-/* Banda superior imagen portada */
-.banda-superior {
-  width: 100%;
-  overflow: hidden;
-  margin-bottom: 1rem;
-}
+      .tabla-lugares td::before {
+        position: absolute;
+        top: 10px;
+        left: 16px;
+        width: 45%;
+        padding-right: 10px;
+        white-space: nowrap;
+        font-weight: bold;
+      }
 
-.banda-superior img.portada-img {
-  width: 100%;
-  height: auto;
-  display: block;
-  object-fit: cover;
-}
+      .tabla-lugares td:nth-of-type(1)::before {
+        content: "Nombre del lugar";
+      }
 
-/* Contenedor de tarjetas */
-.tarjetas-wrapper {
-  background: var(--fondo);
-  padding: 1rem;
-  border-radius: 8px;
-  box-shadow: 0 2px 8px rgb(0 0 0 / 0.1);
-}
+      .tabla-lugares td:nth-of-type(2)::before {
+        content: "Ubicación";
+      }
 
-/* Grid de tarjetas */
-.row {
-  display: flex;
-  flex-wrap: wrap;
-  gap: 1rem;
-  justify-content: center;
-}
+      .tabla-lugares td:nth-of-type(3)::before {
+        content: "Imagen";
+      }
 
-.col {
-  flex: 1 1 calc(33% - 1rem);
-  min-width: 280px;
-  max-width: 350px;
-}
+      .tabla-lugares td:nth-of-type(4)::before {
+        content: "Breve descripción";
+      }
 
-/* Tarjetas */
-.card {
-  border-radius: 10px;
-  overflow: hidden;
-  background: var(--fondo);
-  box-shadow: 0 3px 10px rgb(0 0 0 / 0.1);
-  display: flex;
-  flex-direction: column;
-}
+      .galeria-grid {
+        grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+      }
 
-.card-img-container img {
-  width: 100%;
-  height: 180px;
-  object-fit: cover;
-}
-
-.card-body {
-  padding: 1rem;
-  flex-grow: 1;
-}
-
-.card-title {
-  font-size: 1.25rem;
-  color: var(--rosa-intenso);
-  margin-bottom: 0.5rem;
-}
-
-.card-text, .card-body ul {
-  font-size: 0.9rem;
-  color: #333;
-  line-height: 1.4;
-}
-
-.card-footer {
-  padding: 0.75rem 1rem;
-}
-
-.btn {
-  cursor: pointer;
-  padding: 0.5rem;
-  font-weight: bold;
-  border: none;
-  border-radius: 5px;
-  color: var(--fondo);
-}
-
-.btn-warning {
-  background-color: var(--rosa-intenso);
-  color: var(--fondo);
-  transition: background-color 0.3s ease;
-}
-
-.btn-warning:hover {
-  background-color: var(--rosa-claro);
-  color: var(--rosa-intenso);
-  font-weight: 900;
-}
-
-/* Variantes de tarjetas */
-.card-morado {
-  border: 2px solid var(--rosa-intenso);
-}
-
-.card-morado-claro {
-  border: 2px solid var(--rosa-claro);
-}
-
-/* Texto blanco en títulos dentro de sección paquetes */
-#paquetes-turisticos h2.text-white {
-  color: var(--fondo);
-  text-shadow: 1px 1px 4px rgba(0,0,0,0.3);
-}
-
-/* Responsive */
-@media (max-width: 768px) {
-  .col {
-    flex: 1 1 100%;
-    max-width: 100%;
-  }
-}
-
-
-
-
-
-  </style>
-
+      .video-content iframe {
+        width: 100%;
+        height: auto;
+      }
+    }
   </style>
 </head>
 <body>
-
   <div class="topbar">
     <div class="topbar-left">
       <div class="logo">El Lago Titicaca</div>
@@ -894,8 +958,8 @@
     <h2>Menú</h2>
     <ul>
       <li><a href="#Inicio">Inicio</a></li>
-     <li><a href="#Lugares">Lugares Turísticos</a></li>
-      <li><a href="#Galería">Galería</a></li>
+      <li><a href="#Lugares">Lugares Turísticos</a></li>
+      <li><a href="#Galeria">Galería</a></li>
       <li><a href="#Paquetes">Paquetes</a></li>
       <li><a href="#Datosdelviaje">Datos del Viaje</a></li>
       <li><a href="#Reserva">Reserva</a></li>
@@ -909,7 +973,7 @@
         <p class="frase">“Donde el cielo y el agua se abrazan en la altura”</p>
         <img src="https://andeangreattreks.com/wp-content/uploads/puno-titicaca-lake-by-andean-great-treks.jpg" alt="Islas flotantes del Lago Titicaca" class="imagen-principal">
         <br />
-        <a href="#Galería" class="btn-explorar">Explorar el Portal</a>
+        <a href="#Galeria" class="btn-explorar">Explorar el Portal</a>
       </div>
 
       <div class="galeria-imagenes">
@@ -933,352 +997,381 @@
           <li><strong>Actividades recomendadas:</strong> Turismo vivencial, navegación, senderismo</li>
         </ul>
       </div>
-       <div class="header">
-    <h1><strong>Lago Titicaca</strong></h1>
-    <p>
-      El Lago Titicaca, ubicado a más de 3,800 metros sobre el nivel del mar, es el lago navegable más alto del mundo y uno de los más grandes de Sudamérica. Compartido entre Perú y Bolivia, es considerado la cuna de antiguas civilizaciones andinas. Según la mitología el lago está relacionado a leyendas y al Imperio Inca.
-      <br><br>
-      Este lago sagrado fue hogar de culturas preincaicas como los Pukara, Tiwanaku y los Uros, quienes aún hoy viven en islas flotantes construidas de totora. Rodeado de impresionantes paisajes andinos y lleno de leyendas, el Titicaca es mucho más que un destino turístico: es un lugar lleno de historia, espiritualidad y vida ancestral.
-    </p>
-  </div>
 
-  <div class="info-section">
-    <div class="image-container">
-      <img src="https://denomades.imgix.net/destinos/puno/350/lago-titicaca.jpg" alt="Islas flotantes del Lago Titicaca" />
-    </div>
-    
-    <div class="info-text">
-      <h2><strong>Datos Culturales</strong></h2>
-      <ul>
-        <li><strong>Importancia histórica:</strong> Considerado sagrado por las culturas preincaicas e incas. Según la leyenda, de sus aguas nacieron los fundadores del Imperio Inca.</li>
-        <li><strong>Pueblos originarios:</strong> Uros, que viven en islas flotantes hechas de totora; quechuas y aimaras, con tradiciones ancestrales vivas.</li>
-        <li><strong>Tradiciones vivas:</strong> Textilería en Taquile (reconocida por la UNESCO), música y danzas típicas, festividades religiosas como la Virgen de la Candelaria.</li>
-        <li><strong>Idioma predominante:</strong> Quechua, aimara y español.</li>
-        <li><strong>Economía local:</strong> Basada en pesca, turismo comunitario, agricultura y artesanía.</li>      
-      </ul>
-    </div>
-  </div>
-
-  <div class="additional-section">
-    <h1>Fauna, festividades y actividades turísticas en el Lago Titicaca</h1>
-    <div class="boxes-container">
-      <div class="box">
-        <strong>🐦 Fauna del Lago Titicaca</strong>
+      <div class="header">
+        <h1><strong>Lago Titicaca</strong></h1>
         <p>
-          1. Rana gigante del Titicaca (Telmatobius culeus) – especie endémica en peligro de extinción.<br>
-          2. Karachi – un pez nativo del lago.<br>
-          3. Ispi – pequeño pez muy consumido localmente.<br>
-          4. Flamencos andinos.<br>
-          5. Pato puna.<br>
-          6. Zambullidor del Titicaca (Podiceps taczanowskii) – ave endémica y no voladora.<br>
-          7. Cormoranes y garzas.<br>
-          8. Zorro andino y vizcachas (en áreas más alejadas del lago).
+          El Lago Titicaca, ubicado a más de 3,800 metros sobre el nivel del mar, es el lago navegable más alto del mundo y uno de los más grandes de Sudamérica. Compartido entre Perú y Bolivia, es considerado la cuna de antiguas civilizaciones andinas. Según la mitología el lago está relacionado a leyendas y al Imperio Inca.
+          <br><br>
+          Este lago sagrado fue hogar de culturas preincaicas como los Pukara, Tiwanaku y los Uros, quienes aún hoy viven en islas flotantes construidas de totora. Rodeado de impresionantes paisajes andinos y lleno de leyendas, el Titicaca es mucho más que un destino turístico: es un lugar lleno de historia, espiritualidad y vida ancestral.
         </p>
       </div>
-      <div class="box">
-        <strong>🎉 Festividades en la región del Lago Titicaca</strong>
-        <p>
-          1. Fiesta de la Virgen de la Candelaria (febrero, en Puno, Perú) – la más grande del altiplano andino, reconocida por la UNESCO.<br>
-          2. Semana Santa en Copacabana (Bolivia) – peregrinación religiosa muy popular.<br>
-          3. Año Nuevo Andino-Amazónico (21 de junio) – celebración del solsticio de invierno en la Isla del Sol y otras comunidades.<br>
-          4. Fiesta de Santiago Apóstol (julio, en Taquile) – festividad tradicional con danzas y música.<br>
-          5. Carnavales tradicionales – en varias localidades a orillas del lago.
-        </p>
+
+      <div class="info-section">
+        <div class="image-container">
+          <img src="https://denomades.imgix.net/destinos/puno/350/lago-titicaca.jpg" alt="Islas flotantes del Lago Titicaca" />
+        </div>
+        <div class="info-text">
+          <h2><strong>Datos Culturales</strong></h2>
+          <ul>
+            <li><strong>Importancia histórica:</strong> Considerado sagrado por las culturas preincaicas e incas. Según la leyenda, de sus aguas nacieron los fundadores del Imperio Inca.</li>
+            <li><strong>Pueblos originarios:</strong> Uros, que viven en islas flotantes hechas de totora; quechuas y aimaras, con tradiciones ancestrales vivas.</li>
+            <li><strong>Tradiciones vivas:</strong> Textilería en Taquile (reconocida por la UNESCO), música y danzas típicas, festividades religiosas como la Virgen de la Candelaria.</li>
+            <li><strong>Idioma predominante:</strong> Quechua, aimara y español.</li>
+            <li><strong>Economía local:</strong> Basada en pesca, turismo comunitario, agricultura y artesanía.</li>
+          </ul>
+        </div>
       </div>
-      <div class="box">
-        <strong>🛶 Actividades turísticas en el Lago Titicaca</strong>
-        <p>
-          1. Paseos en bote o lancha por el lago.<br>
-          2. Visita a las Islas Flotantes de los Uros.<br>
-          3. Turismo vivencial en Amantaní y Taquile (alojamiento en casas de familias locales).<br>
-          4. Trekking y senderismo en la Isla del Sol e Isla de la Luna.<br>
-          5. Navegación hacia Copacabana (Bolivia).<br>
-          6. Pesca artesanal (acompañando a pescadores locales).<br>
-          7. Observación de aves y fotografía de paisajes.<br>
-          8. Visita a sitios arqueológicos (como las chullpas de Sillustani o ruinas en la Isla del Sol).<br>
-          9. Talleres de artesanía local (tejido, cerámica, cestería en totora).<br>
-          10. Participación en festividades y rituales andinos.
-        </p>
-      </div>
-    </div>
-  </div>
 
-    </section>
-
-
-
-
-
-<!--SECCION DE LUGARES TURISTICOS*/-->
-
-
-<!-- Sección: Lugares Turísticos -->
-<section id="Lugares" class="content">
-  <h1><strong>Lugares Turísticos del Lago Titicaca</strong></h1>
-
-  <table class="tabla-lugares">
-    <thead>
-      <tr>
-        <th>Nombre del lugar</th>
-        <th>Ubicación</th>
-        <th>Imagen</th>
-        <th>Breve descripción</th>
-      </tr>
-    </thead>
-    <tbody>
-      <tr>
-        <td>Islas Uros</td>
-        <td>Lago Titicaca, Perú</td>
-        <td><img src="https://www.raptravelperu.com/wp-content/uploads/portada-de-los-uros.webp" alt="Islas Uros"></td>
-        <td>Islas flotantes hechas de totora, habitadas por la comunidad Uro, una cultura ancestral que conserva sus tradiciones.</td>
-      </tr>
-      <tr>
-        <td>Isla Taquile</td>
-        <td>Lago Titicaca, Perú</td>
-        <td><img src="https://andeangreattreks.com/wp-content/uploads/ISLA-TAQUILE-BY-ANDEAN-GREAT-TREKS-3.jpg" alt="Isla Taquile"></td>
-        <td>Conocida por su textilería y sus tradiciones indígenas, la isla ofrece paisajes y cultura en perfecta armonía.</td>
-      </tr>
-      <tr>
-        <td>Puno ciudad</td>
-        <td>Puno, Perú</td>
-        <td><img src="https://i0.wp.com/blog.viajesmachupicchu.travel/en/wp-content/uploads/2022/07/148742132_764281107847397_3631784576644872837_n.jpg?resize=1170%2C550&ssl=1" alt="Puno ciudad"></td>
-        <td>Capital del folklore peruano, puerta de entrada al Lago Titicaca, famosa por sus festividades y su cultura andina.</td>
-      </tr>
-      <tr>
-        <td>Isla Amantaní</td>
-        <td>Lago Titicaca, Puno</td>
-        <td><img src="https://upload.wikimedia.org/wikipedia/commons/1/17/Vista_panor%C3%A1mica_de_la_Isla_Amantan%C3%AD.jpg" alt="Isla Amantaní"></td>
-        <td>Isla tranquila con terrazas agrícolas y templos preincaicos. Se practica turismo rural comunitario.</td>
-      </tr>
-      <tr>
-        <td>Chucuito</td>
-        <td>A 18 km de Puno</td>
-        <td><img src="https://upload.wikimedia.org/wikipedia/commons/a/a6/Chucuito_Titicaca_Aerial.jpg" alt="Chucuito"></td>
-        <td>Pequeño pueblo colonial con historia prehispánica. Destaca el Templo de la Fertilidad y vistas al lago.</td>
-      </tr>
-    </tbody>
-  </table>
-</section>
-
-
-
-
-
-
-<!--SECCION DE GALERIA*/-->
-
-
-
-
-
-
-
-
-
-
-
-<!--SECCION DE PAQUETES*/-->
-
-<!--SECCIÓN DE PAQUETES-->
-
-<section id="Paquetes" class="content">
-  <h2 class="section-title">Paquetes Turísticos</h2>
-
-  <!-- Imagen portada -->
-  <div class="banda-superior">
-    <img src="RECURSOS/portadapaquetes.png" class="portada-img" alt="Portada Paquetes Turísticos">
-  </div>
-
-  <!-- Texto introductorio -->
-  <h2 class="mb-4 text-white text-center">
-    Descubre la magia del Lago Titicaca con nuestras experiencias únicas: aventura, cultura y paisajes que quedarán grabados en tu memoria para siempre.
-  </h2>
-
-  <!-- Contenedor de tarjetas -->
-  <div class="tarjetas-wrapper">
-    <div class="row row-cols-1 row-cols-md-3 g-4">
-
-      <!-- Tarjeta 1 -->
-      <div class="col">
-        <div class="card h-100 shadow-sm card-morado">
-          <div class="card-img-container">
-            <img src="https://denomades.imgix.net/destinos/puno/349/isla-taquile.jpg?w=907&h=494&fit=crop&q=100&auto=format,compress&fm=webp" alt="Titicaca Vivencial">
-          </div>
-          <div class="card-body">
-            <h5 class="card-title">Titicaca Vivencial: 4 días</h5>
-            <p class="card-text">
-              Precio por Persona: US $ 150.00<br>
-              Día 01: Recepción en Puno o en el Aeropuerto de Juliaca.<br>
-              Día 02: Tour lago Titicaca Islas flotantes Uros y Amantani (pernocte).<br>
-              Día 03: Tour Isla Taquile y retorno a Puno.<br>
-              Día 04: Tour Sillustani y traslado al Aeropuerto Juliaca o terminal Bus.<br>
-              Servicios Incluyen:<br>
-              02 Noches de Hotel*** + desayuno buffet (Habitación doble o matrimonial)<br>
-              01 Noche de Hospedaje en casa de Familia (Amantani)<br>
-              Guía bilingüe Español / Ingles
+      <div class="additional-section">
+        <h1>Fauna, festividades y actividades turísticas en el Lago Titicaca</h1>
+        <div class="boxes-container">
+          <div class="box">
+            <strong>🐦 Fauna del Lago Titicaca</strong>
+            <p>
+              1. Rana gigante del Titicaca (Telmatobius culeus) – especie endémica en peligro de extinción.<br>
+              2. Karachi – un pez nativo del lago.<br>
+              3. Ispi – pequeño pez muy consumido localmente.<br>
+              4. Flamencos andinos.<br>
+              5. Pato puna.<br>
+              6. Zambullidor del Titicaca (Podiceps taczanowskii) – ave endémica y no voladora.<br>
+              7. Cormoranes y garzas.<br>
+              8. Zorro andino y vizcachas (en áreas más alejadas del lago).
             </p>
           </div>
-          <div class="card-footer bg-transparent border-0">
-            <button class="btn btn-warning w-100">Reservar</button>
+          <div class="box">
+            <strong>🎉 Festividades en la región del Lago Titicaca</strong>
+            <p>
+              1. Fiesta de la Virgen de la Candelaria (febrero, en Puno, Perú) – la más grande del altiplano andino, reconocida por la UNESCO.<br>
+              2. Semana Santa en Copacabana (Bolivia) – peregrinación religiosa muy popular.<br>
+              3. Año Nuevo Andino-Amazónico (21 de junio) – celebración del solsticio de invierno en la Isla del Sol y otras comunidades.<br>
+              4. Fiesta de Santiago Apóstol (julio, en Taquile) – festividad tradicional con danzas y música.<br>
+              5. Carnavales tradicionales – en varias localidades a orillas del lago.
+            </p>
+          </div>
+          <div class="box">
+            <strong>🛶 Actividades turísticas en el Lago Titicaca</strong>
+            <p>
+              1. Paseos en bote o lancha por el lago.<br>
+              2. Visita a las Islas Flotantes de los Uros.<br>
+              3. Turismo vivencial en Amantaní y Taquile (alojamiento en casas de familias locales).<br>
+              4. Trekking y senderismo en la Isla del Sol e Isla de la Luna.<br>
+              5. Navegación hacia Copacabana (Bolivia).<br>
+              6. Pesca artesanal (acompañando a pescadores locales).<br>
+              7. Observación de aves y fotografía de paisajes.<br>
+              8. Visita a sitios arqueológicos (como las chullpas de Sillustani o ruinas en la Isla del Sol).<br>
+              9. Talleres de artesanía local (tejido, cerámica, cestería en totora).<br>
+              10. Participación en festividades y rituales andinos.
+            </p>
           </div>
         </div>
       </div>
+    </section>
 
-      <!-- Tarjeta 2 -->
-      <div class="col">
-        <div class="card h-100 shadow-sm card-morado-claro">
-          <div class="card-img-container">
-            <img src="https://radioondaazul.com/wp-content/uploads/2020/04/Lanchas-en-puno.jpg" alt="Tour Titicaca desde Cusco">
+    <section id="Lugares" class="content">
+      <h1><strong>Lugares Turísticos del Lago Titicaca</strong></h1>
+      <table class="tabla-lugares">
+        <thead>
+          <tr>
+            <th>Nombre del lugar</th>
+            <th>Ubicación</th>
+            <th>Imagen</th>
+            <th>Breve descripción</th>
+          </tr>
+        </thead>
+        <tbody>
+          <tr>
+            <td>Islas Uros</td>
+            <td>Lago Titicaca, Perú</td>
+            <td><img src="https://www.raptravelperu.com/wp-content/uploads/portada-de-los-uros.webp" alt="Islas Uros"></td>
+            <td>Islas flotantes hechas de totora, habitadas por la comunidad Uro, una cultura ancestral que conserva sus tradiciones.</td>
+          </tr>
+          <tr>
+            <td>Isla Taquile</td>
+            <td>Lago Titicaca, Perú</td>
+            <td><img src="https://andeangreattreks.com/wp-content/uploads/ISLA-TAQUILE-BY-ANDEAN-GREAT-TREKS-3.jpg" alt="Isla Taquile"></td>
+            <td>Conocida por su textilería y sus tradiciones indígenas, la isla ofrece paisajes y cultura en perfecta armonía.</td>
+          </tr>
+          <tr>
+            <td>Puno ciudad</td>
+            <td>Puno, Perú</td>
+            <td><img src="https://i0.wp.com/blog.viajesmachupicchu.travel/en/wp-content/uploads/2022/07/148742132_764281107847397_3631784576644872837_n.jpg?resize=1170%2C550&ssl=1" alt="Puno ciudad"></td>
+            <td>Capital del folklore peruano, puerta de entrada al Lago Titicaca, famosa por sus festividades y su cultura andina.</td>
+          </tr>
+          <tr>
+            <td>Isla Amantaní</td>
+            <td>Lago Titicaca, Puno</td>
+            <td><img src="https://upload.wikimedia.org/wikipedia/commons/1/17/Vista_panor%C3%A1mica_de_la_Isla_Amantan%C3%AD.jpg" alt="Isla Amantaní"></td>
+            <td>Isla tranquila con terrazas agrícolas y templos preincaicos. Se practica turismo rural comunitario.</td>
+          </tr>
+          <tr>
+            <td>Chucuito</td>
+            <td>A 18 km de Puno</td>
+            <td><img src="https://upload.wikimedia.org/wikipedia/commons/a/a6/Chucuito_Titicaca_Aerial.jpg" alt="Chucuito"></td>
+            <td>Pequeño pueblo colonial con historia prehispánica. Destaca el Templo de la Fertilidad y vistas al lago.</td>
+          </tr>
+        </tbody>
+      </table>
+    </section>
+
+    <section id="Galeria" class="content">
+      <h1><strong>Galería del Lago Titicaca</strong></h1>
+      <div class="galeria-grid">
+        <div class="galeria-item"><img src="https://cf.bstatic.com/xdata/images/hotel/max1024x768/644677649.jpg?k=0132cd84bd9fe49eb03d97472e6017290f150cd41d843b310d9d17c888701ad9&o=" alt="Vista del lago"></div>
+        <div class="galeria-item"><img src="https://cf.bstatic.com/xdata/images/hotel/max1024x768/633279803.jpg?k=8d5fd32b82b15c0062c99da7fd8b672e39fc488262b606827d1fa0160bf0726f&o=&hp=1" alt="Isla flotante"></div>
+        <div class="galeria-item"><img src="https://cf.bstatic.com/xdata/images/hotel/max1024x768/594308167.jpg?k=6b21ff710933e7081732eec1b1bdf174681bdb81a59fc059401b47e54ae02108&o=&hp=1" alt="Paisaje altiplano"></div>
+        <div class="galeria-item"><img src="https://cf.bstatic.com/xdata/images/hotel/max1024x768/594308175.jpg?k=19e8a33df687ed289b2006d88a50ac66cb1b59b6cc7ee6b72510e2940aae9816&o=&hp=1" alt="Atardecer en Titicaca"></div>
+        <div class="galeria-item"><img src="https://cf.bstatic.com/xdata/images/hotel/max1024x768/594308125.jpg?k=4fefea8909aa852610ec1727152a193426ca82dab13220ab4ac7d5e17c25c57a&o=&hp=1" alt="Bote en el lago"></div>
+        <div class="galeria-item"><img src="https://cf.bstatic.com/xdata/images/hotel/max1024x768/600501327.jpg?k=4ab37573d4e0bf4075d870b853649b0d38a22949332bf34dde43834b596f0d3e&o=&hp=1" alt="Bote en el lago"></div>
+        <div class="galeria-item"><img src="https://cf.bstatic.com/xdata/images/hotel/max1024x768/650611453.jpg?k=0b0f218f190401eea82d13dbcdad6a2cba956f65019e5412d69f9072d28ba544&o=" alt="Bote en el lago"></div>
+        <div class="galeria-item"><img src="https://cf.bstatic.com/xdata/images/hotel/max1024x768/600501328.jpg?k=639c9ee74d80a7cd1b77e67d64b35f0ef2034fc25346cbf25a89fbb1a609b4f9&o=&hp=1" alt="Bote en el lago"></div>
+        <div class="galeria-item"><img src="https://cf.bstatic.com/xdata/images/hotel/max1024x768/666915608.jpg?k=84f9d85f2704b66d25ebc8ca7ba3926637dcba1cbd1b855c3123cc9720bf7089&o=&hp=1" alt="Bote en el lago"></div>
+        <div class="galeria-item"><img src="https://dynamic-media-cdn.tripadvisor.com/media/photo-o/09/28/9f/2b/lago-titicaca.jpg?w=1200&h=-1&s=1" alt="Bote en el lago"></div>
+        <div class="galeria-item"><img src="https://www.chullostravelperu.com/blog/wp-content/uploads/2023/02/b-lago-titicaca.jpg" alt="Bote en el lago"></div>
+        <div class="galeria-item"><img src="https://boliviaturistica.com/wp-content/uploads/2018/08/Lago-Titicaca-Bolivia.jpg" alt="Bote en el lago"></div>
+      </div>
+      <div class="video-content">
+        <h2>El legendario Lago Titicaca</h2>
+        <iframe width="560" height="315" src="https://www.youtube.com/embed/k4GgT3DvH3E" title="Video sobre el Lago Titicaca" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+        <h2>Conoce más sobre el Lago Titicaca</h2>
+        <iframe width="560" height="315" src="https://www.youtube.com/embed/frM5EjRKwPI" title="Video adicional sobre el Lago Titicaca" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+      </div>
+      <p class="text-center mt-4">Haz clic en cada imagen para verla en tamaño completo.</p>
+    </section>
+
+    <section id="Paquetes" class="content">
+      <h2 class="section-title">Paquetes Turísticos</h2>
+      <div class="banda-superior">
+        <img src="https://www.peru.travel/Contenido/Experiencia/Imagen/es/44/1.2/Recorrido%20Puno%20Lago%20Titicaca.jpg" class="portada-img" alt="Portada Paquetes Turísticos">
+      </div>
+      <h2 class="mb-4 text-white text-center">
+        Descubre la magia del Lago Titicaca con nuestras experiencias únicas: aventura, cultura y paisajes que quedarán grabados en tu memoria para siempre.
+      </h2>
+      <div class="tarjetas-wrapper">
+        <div class="row">
+          <div class="col">
+            <div class="card h-100 shadow-sm card-morado">
+              <div class="card-img-container">
+                <img src="https://denomades.imgix.net/destinos/puno/349/isla-taquile.jpg?w=907&h=494&fit=crop&q=100&auto=format,compress&fm=webp" alt="Titicaca Vivencial">
+              </div>
+              <div class="card-body">
+                <h5 class="card-title">Titicaca Vivencial: 4 días</h5>
+                <p class="card-text">
+                  Precio por Persona: US $ 150.00<br>
+                  Día 01: Recepción en Puno o en el Aeropuerto de Juliaca.<br>
+                  Día 02: Tour lago Titicaca Islas flotantes Uros y Amantani (pernocte).<br>
+                  Día 03: Tour Isla Taquile y retorno a Puno.<br>
+                  Día 04: Tour Sillustani y traslado al Aeropuerto Juliaca o terminal Bus.<br>
+                  Servicios Incluyen:<br>
+                  02 Noches de Hotel*** + desayuno buffet (Habitación doble o matrimonial)<br>
+                  01 Noche de Hospedaje en casa de Familia (Amantani)<br>
+                  Guía bilingüe Español / Ingles
+                </p>
+              </div>
+              <div class="card-footer bg-transparent border-0">
+                <button class="btn btn-warning w-100">Reservar</button>
+              </div>
+            </div>
           </div>
-          <div class="card-body">
-            <h5 class="card-title">Tour Titicaca desde Cusco 3 días</h5>
-            <ul>
-              <li>Precio por Persona: US $ 115.00</li>
-              <li>Día 1: Tour Ruta del Sol en Bus de Cusco a Puno + Almuerzo</li>
-              <li>Día 2: Tour lago Titicaca Islas flotantes Uros y Taquile</li>
-              <li>Día 3: Transporte en Bus de Puno a Cusco (o La Paz Bolivia)</li>
-              <li>Servicios Incluyen:
-                Transporte en Bus Turístico de Cusco a Puno, Almuerzo buffet en ruta del Sol, Traslados locales en Puno, Transporte en Bote a Motor, Guía Bilingüe Español / Ingles, Almuerzo en isla Taquile, Boletos de ingreso, Transporte en Bus asientos 160° de Puno a Cusco
-              </li>
-            </ul>
+          <div class="col">
+            <div class="card h-100 shadow-sm card-morado-claro">
+              <div class="card-img-container">
+                <img src="https://radioondaazul.com/wp-content/uploads/2020/04/Lanchas-en-puno.jpg" alt="Tour Titicaca desde Cusco">
+              </div>
+              <div class="card-body">
+                <h5 class="card-title">Tour Titicaca desde Cusco 3 días</h5>
+                <ul>
+                  <li>Precio por Persona: US $ 115.00</li>
+                  <li>Día 1: Tour Ruta del Sol en Bus de Cusco a Puno + Almuerzo</li>
+                  <li>Día 2: Tour lago Titicaca Islas flotantes Uros y Taquile</li>
+                  <li>Día 3: Transporte en Bus de Puno a Cusco (o La Paz Bolivia)</li>
+                  <li>Servicios Incluyen:
+                    Transporte en Bus Turístico de Cusco a Puno, Almuerzo buffet en ruta del Sol, Traslados locales en Puno, Transporte en Bote a Motor, Guía Bilingüe Español / Ingles, Almuerzo en isla Taquile, Boletos de ingreso, Transporte en Bus asientos 160° de Puno a Cusco
+                  </li>
+                </ul>
+              </div>
+              <div class="card-footer bg-transparent border-0">
+                <button class="btn btn-warning w-100">Reservar</button>
+              </div>
+            </div>
           </div>
-          <div class="card-footer bg-transparent border-0">
-            <button class="btn btn-warning w-100">Reservar</button>
+          <div class="col">
+            <div class="card h-100 shadow-sm card-morado">
+              <div class="card-img-container">
+                <img src="https://www.titicacatour.com/wp-content/uploads/2025/01/balsa-uros.jpg" alt="Tour Titicaca Místico">
+              </div>
+              <div class="card-body">
+                <h5 class="card-title">Tour Titicaca Místico: 3 días</h5>
+                <ul>
+                  <li>Precio por Persona: US $ 85.00</li>
+                  <li>¡Se recomienda este tour a grupos de más de 2 participantes!</li>
+                  <li>Día 01: Recepción y City Tour Puno miradores.</li>
+                  <li>Día 02: Tour Titicaca Islas flotantes Uros y Chullpas de Sillustani.</li>
+                  <li>Día 03: Tour Ruta Aimara: Chucuito Templo de la Fertilidad y Portal de Aramu muru.</li>
+                </ul>
+              </div>
+              <div class="card-footer bg-transparent border-0">
+                <button class="btn btn-warning w-100">Reservar</button>
+              </div>
+            </div>
+          </div>
+          <div class="col">
+            <div class="card h-100 shadow-sm card-morado-claro">
+              <div class="card-img-container">
+                <img src="https://cf.bstatic.com/xdata/images/hotel/max1024x768/61889637.jpg?k=feab02a523e59f7ce2f41176e7f0c4dca2eedb0af2467050a79a7a3078d32f5d&o=&hp=1" alt="Islas del Sol y Luna">
+              </div>
+              <div class="card-body">
+                <h5 class="card-title">Islas del Sol y Luna: 3 días</h5>
+                <ul>
+                  <li>Precio por persona: US $ 170.00</li>
+                  <li>Día 01: Puno o (La Paz) Copacabana.</li>
+                  <li>Día 02: Tour a La Isla del Sol e Isla de la Luna.</li>
+                  <li>Día 03: Retorno a Copacabana, La Paz o Puno</li>
+                  <li>Servicio Incluye:
+                    Recojo de su Hotel en Puno (o La Paz), Transporte en Bus Turístico Puno (La Paz) / Copacabana / La Paz (o Puno), Transporte en Bote a Motor, Guía de Turismo, Boletos de Ingreso, 01 Noche de Hotel en Copacabana + desayuno, 01 noche de Hostal en Isla del Sol + desayuno, Almuerzo en la Isla del Sol.
+                  </li>
+                </ul>
+              </div>
+              <div class="card-footer bg-transparent border-0">
+                <button class="btn btn-warning w-100">Reservar</button>
+              </div>
+            </div>
+          </div>
+          <div class="col">
+            <div class="card h-100 shadow-sm card-morado">
+              <div class="card-img-container">
+                <img src="https://cf.bstatic.com/xdata/images/hotel/max1024x768/221764795.jpg?k=37d0b657f95621a634b258af065071f8712ce9e4d3086bfd74f3f377b4ce5b31&o=&hp=1" alt="Experiencia Platinum Titicaca">
+              </div>
+              <div class="card-body">
+                <h5 class="card-title">Experiencia Platinum Titicaca</h5>
+                <ul>
+                  <li>Precio por persona: US $ 190.00</li>
+                  <li>Transporte en Bote a Motor.</li>
+                  <li>2 noches en Hotel QHAPAQ: Habitación deluxe con cama extragrande y sofá cama, 38 m²</li>
+                  <li>Vistas panorámicas al lago, río, montaña y jardín</li>
+                  <li>Baño privado con bañera o ducha y artículos de aseo gratis</li>
+                  <li>Terraza privada con muebles de exterior</li>
+                  <li>WiFi gratis, calefacción y entrada privada</li>
+                  <li>Ambiente tranquilo con purificadores de aire y acceso a áreas de interés</li>
+                </ul>
+              </div>
+              <div class="card-footer bg-transparent border-0">
+                <button class="btn btn-warning w-100">Reservar</button>
+              </div>
+            </div>
+          </div>
+          <div class="col">
+            <div class="card h-100 shadow-sm card-morado-claro">
+              <div class="card-img-container">
+                <img src="https://cf.bstatic.com/xdata/images/hotel/max1280x900/644677845.jpg?k=d7c6b572ddd77d66ffba9cc1dfe4d77bb0549992be95d301d0d18e945c4a0675&o=&hp=1" alt="Luxury Escape Lago Titicaca">
+              </div>
+              <div class="card-body">
+                <h5 class="card-title">Luxury Escape Lago Titicaca</h5>
+                <ul>
+                  <li>Precio por persona: US $ 250.00</li>
+                  <li>Transporte privado en lancha de lujo.</li>
+                  <li>3 noches en Hotel de lujo con vistas al lago.</li>
+                  <li>Experiencias gastronómicas exclusivas.</li>
+                  <li>Guía privado bilingüe (Español/Inglés).</li>
+                  <li>Acceso a spa y actividades personalizadas.</li>
+                </ul>
+              </div>
+              <div class="card-footer bg-transparent border-0">
+                <button class="btn btn-warning w-100">Reservar</button>
+              </div>
+            </div>
           </div>
         </div>
       </div>
+    </section>
 
-      <!-- Tarjeta 3 -->
-      <div class="col">
-        <div class="card h-100 shadow-sm card-morado">
-          <div class="card-img-container">
-            <img src="https://www.titicacatour.com/wp-content/uploads/2025/01/balsa-uros.jpg" alt="Tour Titicaca Místico">
+    <section id="Datosdelviaje" class="content">
+      <div class="container">
+        <h1>Paquetes Turísticos</h1>
+        <p class="subtitle">Cada experiencia tiene una riqueza escondida. ¡Encuéntrala!</p>
+        <div class="grid">
+          <div class="dv-card orange">
+            <img src="https://images.unsplash.com/photo-1506744038136-46273834b3fb?auto=format&fit=crop&w=400&q=80" alt="Isla de los Uros" />
+            <h3>Isla de los Uros</h3>
+            <p>Recorrido por las islas flotantes del Lago Titicaca.</p>
           </div>
-          <div class="card-body">
-            <h5 class="card-title">Tour Titicaca Místico: 3 días</h5>
-            <ul>
-              <li>Precio por Persona: US $ 85.00</li>
-              <li>¡Se recomienda este tour a grupos de más de 2 participantes!</li>
-              <li>Día 01: Recepción y City Tour Puno miradores.</li>
-              <li>Día 02: Tour Titicaca Islas flotantes Uros y Chullpas de Sillustani.</li>
-              <li>Día 03: Tour Ruta Aimara: Chucuito Templo de la Fertilidad y Portal de Aramu muru.</li>
-            </ul>
+          <div class="dv-card blue">
+            <img src="https://images.unsplash.com/photo-1519125323398-675f0ddb6308?auto=format&fit=crop&w=400&q=80" alt="Isla Taquile" />
+            <h3>Isla Taquile</h3>
+            <p>Descubre la cultura y artesanías de la isla.</p>
           </div>
-          <div class="card-footer bg-transparent border-0">
-            <button class="btn btn-warning w-100">Reservar</button>
+          <div class="dv-card beige">
+            <img src="https://images.unsplash.com/photo-1500534623283-312aade485b7?auto=format&fit=crop&w=400&q=80" alt="Puno" />
+            <h3>Puno</h3>
+            <p>Visita la ciudad capital del folklore peruano.</p>
           </div>
-        </div>
-      </div>
-
-      <!-- Tarjeta 4 -->
-      <div class="col">
-        <div class="card h-100 shadow-sm card-morado-claro">
-          <div class="card-img-container">
-            <img src="https://cf.bstatic.com/xdata/images/hotel/max1024x768/61889637.jpg?k=feab02a523e59f7ce2f41176e7f0c4dca2eedb0af2467050a79a7a3078d32f5d&o=&hp=1" alt="Islas del Sol y Luna">
-          </div>
-          <div class="card-body">
-            <h5 class="card-title">Islas del Sol y Luna: 3 días</h5>
-            <ul>
-              <li>Precio por persona: US $ 170.00</li>
-              <li>Día 01: Puno o (La Paz) Copacabana.</li>
-              <li>Día 02: Tour a La Isla del Sol e Isla de la Luna.</li>
-              <li>Día 03: Retorno a Copacabana, La Paz o Puno</li>
-              <li>Servicio Incluye:
-                Recojo de su Hotel en Puno (o La Paz), Transporte en Bus Turístico Puno (La Paz) / Copacabana / La Paz (o Puno), Transporte en Bote a Motor, Guía de Turismo, Boletos de Ingreso, 01 Noche de Hotel en Copacabana + desayuno, 01 noche de Hostal en Isla del Sol + desayuno, Almuerzo en la Isla del Sol.
-              </li>
-            </ul>
-          </div>
-          <div class="card-footer bg-transparent border-0">
-            <button class="btn btn-warning w-100">Reservar</button>
-          </div>
-        </div>
-      </div>
-
-      <!-- Tarjeta 5 -->
-      <div class="col">
-        <div class="card h-100 shadow-sm card-morado">
-          <div class="card-img-container">
-            <img src="https://cf.bstatic.com/xdata/images/hotel/max1024x768/221764795.jpg?k=37d0b657f95621a634b258af065071f8712ce9e4d3086bfd74f3f377b4ce5b31&o=&hp=1" alt="Experiencia Platinum Titicaca">
-          </div>
-          <div class="card-body">
-            <h5 class="card-title">Experiencia Platinum Titicaca</h5>
-            <ul>
-              <li>Precio por persona: US $ 190.00</li>
-              <li>Transporte en Bote a Motor.</li>
-              <li>2 noches en Hotel QHAPAQ: Habitación deluxe con cama extragrande y sofá cama, 38 m²</li>
-              <li>Vistas panorámicas al lago, río, montaña y jardín</li>
-              <li>Baño privado con bañera o ducha y artículos de aseo gratis</li>
-              <li>Terraza privada con muebles de exterior</li>
-              <li>WiFi gratis, calefacción y entrada privada</li>
-              <li>Ambiente tranquilo con purificadores de aire y acceso a áreas de interés</li>
-            </ul>
-          </div>
-          <div class="card-footer bg-transparent border-0">
-            <button class="btn btn-warning w-100">Reservar</button>
+          <div class="dv-stats">
+            <h2>Más Visitados</h2>
+            <div class="dv-stats-box">
+              <h3>12,450</h3>
+              <p>Prefieren nuestros servicios</p>
+            </div>
+            <div class="bar-group">
+              <img src="https://images.unsplash.com/photo-1506744038136-46273834b3fb?auto=format&fit=crop&w=80&q=80" alt="Isla de los Uros" />
+              <div class="bar">
+                <div class="fill" style="width: 70%;"></div>
+              </div>
+              <div class="percent">70%</div>
+            </div>
+            <div class="bar-group">
+              <img src="https://images.unsplash.com/photo-1519125323398-675f0ddb6308?auto=format&fit=crop&w=80&q=80" alt="Isla Taquile" />
+              <div class="bar">
+                <div class="fill" style="width: 55%;"></div>
+              </div>
+              <div class="percent">55%</div>
+            </div>
+            <div class="bar-group">
+              <img src="https://images.unsplash.com/photo-1500534623283-312aade485b7?auto=format&fit=crop&w=80&q=80" alt="Puno" />
+              <div class="bar">
+                <div class="fill" style="width: 40%;"></div>
+              </div>
+              <div class="percent">40%</div>
+            </div>
           </div>
         </div>
+        <div class="dv-opinions-header">Opiniones Recibidas</div>
+        <div class="dv-comment">
+          "Una experiencia increíble, todo estuvo muy bien organizado. La gente es muy amable y el paisaje es espectacular."
+          <div class="dv-author">– Ana M.</div>
+        </div>
+        <div class="dv-comment">
+          "Me encantó la visita a la Isla Taquile, aprendí mucho sobre sus tradiciones y artesanías."
+          <div class="dv-author">– Luis P.</div>
+        </div>
+        <div class="dv-comment">
+          "El tour a las islas flotantes fue inolvidable. Muy recomendado para quienes aman la naturaleza."
+          <div class="dv-author">– Carla G.</div>
+        </div>
       </div>
+    </section>
 
-      <!-- Tarjeta 6 -->
-      <div class="col">
-        <div class="card h-100 shadow-sm card-morado-claro">
-          <div class="card-img-container">
-            <img src="https://cf.bstatic.com/xdata/images/hotel/max1280x900/644677845.jpg?k=d7c6b572ddd77d66ffba9cc1dfe4d77bb0549992be95d301d0d18e945c4a0675&o=&hp=1" alt="Luxury Escape Lago Titicaca">
-          </div>
-          <div class="card-body">
-            <h5 class="card-title">Luxury Escape Lago Titic
-            </section>
-
-
-
-
-
-
-
-<!--SECCION DE DATOS DE VIAJE*/-->
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
+    <section id="Reserva" class="content">
+      <h2>Formulario de Reserva de Tour</h2>
+      <div class="formulario">
+        <form>
+          <label for="nombre">Nombre:</label>
+          <input type="text" id="nombre" placeholder="Ingresa tu nombre completo" required>
+          <label for="correo">Correo electrónico:</label>
+          <input type="email" id="correo" placeholder="ejemplo@correo.com" required>
+          <label for="tipoTour">Tipo de Tour:</label>
+          <select id="tipoTour" required>
+            <option value="">Selecciona un tour</option>
+            <option value="lago">Tour por el lago</option>
+            <option value="aventura">Tour de Aventura</option>
+            <option value="historia">Tour Histórico</option>
+            <option value="gastronomia">Tour Gastronómico</option>
+          </select>
+          <label for="comentarios">Comentarios o Preguntas:</label>
+          <textarea id="comentarios" placeholder="¿Tienes alguna duda o petición especial?"></textarea>
+          <button type="submit">Enviar</button>
+        </form>
+      </div>
+    </section>
 
     <footer>
       <div class="footer-container">
@@ -1286,14 +1379,14 @@
           <h5>Sobre El Lago</h5>
           <ul>
             <li><a href="#Inicio">Inicio</a></li>
-            <li><a href="#Galería">Galería</a></li>
+            <li><a href="#Galeria">Galería</a></li>
           </ul>
         </div>
         <div class="footer-column">
           <h5>Paquetes Turísticos</h5>
           <ul>
             <li><a href="#Paquetes">Paquetes turísticos</a></li>
-            <li><a href="#Datos">Datos del viaje</a></li>
+            <li><a href="#Datosdelviaje">Datos del viaje</a></li>
           </ul>
         </div>
         <div class="footer-column">
@@ -1308,6 +1401,9 @@
       <div class="footer-bottom">
         © 2025 Portal Turístico | Estefany Encarnación, Carolina Muñoz, Brenda Ticlia, Raquel Salinas y Giasel Violeta - Todos los derechos reservados.
       </div>
+      <audio id="audioTiticaca" src="AUDIO" controls autoplay loop preload="auto">
+        Tu navegador no soporta el elemento de audio.
+      </audio>
     </footer>
   </div>
 </body>
